@@ -1,5 +1,7 @@
 project:
   type: website
+  output-dir: docs  # added manually
+
 
 website:
   title: "tzonniStam_all"
