@@ -1,21 +1,59 @@
 ---
 title: "tzonniStam_all"
-output: html_document    # or pdf_document or word_document
+output: html_document
 editor_options: 
   chunk_output_type: console
 ---
 
-This is a Quarto website.
+<!-- Swiper CSS -->
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-```{r}
-1 + 1
+<!-- Swiper HTML -->
+
+```         
+<div class="swiper-slide"><img src="images/1.png" /></div>
+<div class="swiper-slide"><img src="images/2.png" /></div>
+<div class="swiper-slide"><img src="images/3.png" /></div>
+<div class="swiper-slide"><img src="images/b.png" /></div>
+<div class="swiper-slide"><img src="images/c.png" /></div>
+<div class="swiper-slide"><img src="images/e.png" /></div>
 ```
+
+<!-- Navigation buttons -->
+
+<!-- Pagination dots -->
+
+<!-- Swiper JS -->
+
+```{=html}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"</script>
+```
+
+```{=html}
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: { delay: 2500 },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+```
+
+<a href="images/1.png" data-lightbox="gallery" data-title="1.png"> <img src="thumbs/1.png" alt="1.png" style="margin:5px; border:1px solid #ccc;"/> </a><a href="images/2.png" data-lightbox="gallery" data-title="2.png"> <img src="thumbs/2.png" alt="2.png" style="margin:5px; border:1px solid #ccc;"/> </a><a href="images/3.png" data-lightbox="gallery" data-title="3.png"> <img src="thumbs/3.png" alt="3.png" style="margin:5px; border:1px solid #ccc;"/> </a><a href="images/b.png" data-lightbox="gallery" data-title="b.png"> <img src="thumbs/b.png" alt="b.png" style="margin:5px; border:1px solid #ccc;"/> </a><a href="images/c.png" data-lightbox="gallery" data-title="c.png"> <img src="thumbs/c.png" alt="c.png" style="margin:5px; border:1px solid #ccc;"/> </a><a href="images/e.png" data-lightbox="gallery" data-title="e.png"> <img src="thumbs/e.png" alt="e.png" style="margin:5px; border:1px solid #ccc;"/> </a>
 
 Αγαπητ\@ συγχωριαν\@,
 
 Mοιράζομαι μαζί σας κάτι που με απασχόλησε πριν από περίπου 11 χρόνια και εύχομαι να το είχα κάνει πολύ νωρίτερα. Από την παιδική ηλικία ερχόμουν συχνά στα Δολιανά, τόπο που γεννήθηκε και μεγάλωσε η γιαγιά μου. Έκανα αδελφικές φιλίες, έπαιξα με την ψυχή μου, αθλήθηκα ομαδικά και λάτρεψα την μουσική και το χορό μας. Αλησμόνητα τα γλέντια που έζησα, θυμάμαι από μικρός να πέφτω για ύπνο και να ακούω τα όργανα να βαράνε στην πλατεία, το ντέφι να αντηχεί μέσα μου και να ακουγεται πότε πιο κοντά πότε να απομακρύνεται. Η λαχτάρα για το πανηγύρι του χωριού, στις 16 Αυγούστου τότε, ήταν πολύ μεγάλη, μια ιεροτελεστία, όλα, από το ποιον χορό θα πάρεις, ποιος θα σε κρατήσει, ποιους θα κρατήσεις εσύ μετά κι όσο περνούσε η ώρα δεν είχε σημασία τίποτα άλλο παρά μόνο να είσαι σε αυτόν τον κύκλο και να ενωθείς στην πωγωνίσια μυσταγωγία. Το 2014 μου έγινε ξεκάθαρο ότι μία αλλαγή είχε συντελεστεί ενώ έβλεπα νοσταλγικά ένα βίντεο από το πανηγύρι μας, του 2011 και το παραθέτω.
+
+------------------------------------------------------------------------
 
 ::: {style="text-align: right;"}
 Σεπτέμβριος 2014
@@ -33,6 +71,6 @@ Mοιράζομαι μαζί σας κάτι που με απασχόλησε π
 
 Κλείνοντας θέλω να πω ότι αν και τόσο νέος έχει βάλει το πήχη πολύ ψηλά για όλους μας και μπόλιασε μια ολόκληρη γενιά, η οποία έχει συνέχεια. Για αυτό το λόγο και επειδή καλοκαίρι έρχεται, εκτός από καλημέρα μια μέρα να του πείτε και ευχαριστώ..
 
-{{< include gallery.html >}}
+------------------------------------------------------------------------
 
 Αυτά μου είχαν έρθει στο μυαλό τότε βλέποντας το βίντεο να σέρνει το χορό με όλα τα παιδιά του χωριού σε ένα πανηγύρι που είχε σχεδόν κλείσει και οι περισσότεροι είχαν φύγει. Αυτός ο άνθρωπος μετά τις τόσες ατομικές επιδόσεις και καταξιώσεις συνέχισε να προπονεί και να οδηγεί σε επιτυχίες ομάδες βόλλευ, όπως αυτή της ομάδας Ιωαννίνων

@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -74,7 +39,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a14e3238c51140e99ccc48519b6ed9ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,12 +67,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -143,9 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -168,16 +132,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<!-- Swiper CSS -->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></p>
+<!-- Swiper HTML -->
+<pre><code>&lt;div class="swiper-slide"&gt;&lt;img src="images/1.png" /&gt;&lt;/div&gt;
+&lt;div class="swiper-slide"&gt;&lt;img src="images/2.png" /&gt;&lt;/div&gt;
+&lt;div class="swiper-slide"&gt;&lt;img src="images/3.png" /&gt;&lt;/div&gt;
+&lt;div class="swiper-slide"&gt;&lt;img src="images/b.png" /&gt;&lt;/div&gt;
+&lt;div class="swiper-slide"&gt;&lt;img src="images/c.png" /&gt;&lt;/div&gt;
+&lt;div class="swiper-slide"&gt;&lt;img src="images/e.png" /&gt;&lt;/div&gt;</code></pre>
+<!-- Navigation buttons -->
+<!-- Pagination dots -->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" <="" script="">
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: { delay: 2500 },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+<p><a href="images/1.png" data-lightbox="gallery" data-title="1.png"> <img src="thumbs/1.png" alt="1.png" style="margin:5px; border:1px solid #ccc;"> </a><a href="images/2.png" data-lightbox="gallery" data-title="2.png"> <img src="thumbs/2.png" alt="2.png" style="margin:5px; border:1px solid #ccc;"> </a><a href="images/3.png" data-lightbox="gallery" data-title="3.png"> <img src="thumbs/3.png" alt="3.png" style="margin:5px; border:1px solid #ccc;"> </a><a href="images/b.png" data-lightbox="gallery" data-title="b.png"> <img src="thumbs/b.png" alt="b.png" style="margin:5px; border:1px solid #ccc;"> </a><a href="images/c.png" data-lightbox="gallery" data-title="c.png"> <img src="thumbs/c.png" alt="c.png" style="margin:5px; border:1px solid #ccc;"> </a><a href="images/e.png" data-lightbox="gallery" data-title="e.png"> <img src="thumbs/e.png" alt="e.png" style="margin:5px; border:1px solid #ccc;"> </a></p>
 <p>Αγαπητ@ συγχωριαν@,</p>
 <p>Mοιράζομαι μαζί σας κάτι που με απασχόλησε πριν από περίπου 11 χρόνια και εύχομαι να το είχα κάνει πολύ νωρίτερα. Από την παιδική ηλικία ερχόμουν συχνά στα Δολιανά, τόπο που γεννήθηκε και μεγάλωσε η γιαγιά μου. Έκανα αδελφικές φιλίες, έπαιξα με την ψυχή μου, αθλήθηκα ομαδικά και λάτρεψα την μουσική και το χορό μας. Αλησμόνητα τα γλέντια που έζησα, θυμάμαι από μικρός να πέφτω για ύπνο και να ακούω τα όργανα να βαράνε στην πλατεία, το ντέφι να αντηχεί μέσα μου και να ακουγεται πότε πιο κοντά πότε να απομακρύνεται. Η λαχτάρα για το πανηγύρι του χωριού, στις 16 Αυγούστου τότε, ήταν πολύ μεγάλη, μια ιεροτελεστία, όλα, από το ποιον χορό θα πάρεις, ποιος θα σε κρατήσει, ποιους θα κρατήσεις εσύ μετά κι όσο περνούσε η ώρα δεν είχε σημασία τίποτα άλλο παρά μόνο να είσαι σε αυτόν τον κύκλο και να ενωθείς στην πωγωνίσια μυσταγωγία. Το 2014 μου έγινε ξεκάθαρο ότι μία αλλαγή είχε συντελεστεί ενώ έβλεπα νοσταλγικά ένα βίντεο από το πανηγύρι μας, του 2011 και το παραθέτω.</p>
+<hr>
 <div style="text-align: right;">
 <p>Σεπτέμβριος 2014</p>
 </div>
@@ -187,59 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Σε συλλογικό επίπεδο, αν και ήταν ικανή και ταλαντούχα μονάδα, έδινε ιδιαίτερη βαρύτητα στην έννοια της ομάδας. Αυτό φάνηκε, όταν ήρθε η σειρά του να διαχειριστεί ομάδες (να μας οργανώσει πολλές φορές για τα Θυάμια). Έτσι, έδινε ευκαιρίες στη συμμετοχή, χώρο στους νεότερους ανεξαρτήτως ταλέντου, χρόνο συμμετοχής σε όλους, πράγματα που δεν τα έβλεπες παλαιότερα. Με τον τρόπο αυτό, ανεξαρτήτως αποτελέσματος (που συνήθως ήταν νικηφόρο!), έχτιζε ένα όμορφο ομαδικό κλίμα. Το πιο μαγικό αποτέλεσμα ήταν ότι την επόμενη χρονιά θα έβλεπες παιδιά πιο ντροπαλά ή λιγότερο αθλητικά ανεξαρτήτως φύλου ή άλλου χαρακτηριστικού να ενσωματώνονται στην ομάδα ή και να αποτελούν αναπόσπαστο κομμάτι της. Κοινώς, κέρδιζαν τα μικρά παιδιά των Δολιανών τα μεγαλύτερα έφηβα-νέα παιδιά γειτονικών χωριών στην άλλη άκρη του φιλέ. Κάθε μέρα γύρω στις 7μμ (όταν έπεφτε τότε ο κόντρα ήλιος) όλο το χωριό στο γήπεδο βόλλευ έπαιρνε χρόνο συμμετοχής, γινόντουσαν μέρος αθλητικών συστημάτων, είχαν τη θέση τους, πάσα, υποδοχή, σερβίς..</p>
 <p>Κι αν περάσουμε στα κοινωνικά και τα πολιστικά, έχει συνεισφέρει κι εκεί. Ο φιλικός και κοινωνικός του χαρακτήρας τον έκανε αδιαμφισβήτητα δημοφιλή και αγαπητό από μικρό παιδί. Η αγάπη του για τη μουσική και το χορό ήταν και είναι δεδομένη. Έτσι όλη αυτή η ομάδα που έχτισε και έφερε στο γήπεδο την ανέβασε στη πλατεία (όπως στο βίντεο), στο πανηγύρι του χωριού (καλά και στα γύρω χωριά). Τι καλύτερο; Αυτός που μύησε τα παιδία και τα εγγόνια όλων στον υγιή αθλητισμό, μετά τον ακολούθησαν στο χορό σε πωγωνίσια μοτίβα. Γέμισε η πλατεία νεολαία ακούς σε πηγαδάκια, χορεύουν, τραγουδούν, αγαπούν το χωριό..</p>
 <p>Κλείνοντας θέλω να πω ότι αν και τόσο νέος έχει βάλει το πήχη πολύ ψηλά για όλους μας και μπόλιασε μια ολόκληρη γενιά, η οποία έχει συνέχεια. Για αυτό το λόγο και επειδή καλοκαίρι έρχεται, εκτός από καλημέρα μια μέρα να του πείτε και ευχαριστώ..</p>
-<style>
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.gallery img {
-  width: 180px;
-  height: auto;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding: 20px;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.9);
-}
-
-.lightbox img {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80%;
-}
-
-.lightbox:target {
-  display: block;
-}
-</style>
-<div class="gallery">
-<p><a href="#img1"><img src="images/1.png" alt="Photo 1"></a> <a href="#img2"><img src="images/2.png" alt="Photo 2"></a> <a href="#img3"><img src="images/3.png" alt="Photo 3"></a></p>
-</div>
-<div id="img1" class="lightbox">
-<p><a href="#"><img src="images/1.png" alt="Photo 1"></a></p>
-</div>
-<div id="img2" class="lightbox">
-<p><a href="#"><img src="images/2.png" alt="Photo 2"></a></p>
-</div>
-<div id="img3" class="lightbox">
-<p><a href="#"><img src="images/3.png" alt="Photo 3"></a></p>
-</div>
+<hr>
 <p>Αυτά μου είχαν έρθει στο μυαλό τότε βλέποντας το βίντεο να σέρνει το χορό με όλα τα παιδιά του χωριού σε ένα πανηγύρι που είχε σχεδόν κλείσει και οι περισσότεροι είχαν φύγει. Αυτός ο άνθρωπος μετά τις τόσες ατομικές επιδόσεις και καταξιώσεις συνέχισε να προπονεί και να οδηγεί σε επιτυχίες ομάδες βόλλευ, όπως αυτή της ομάδας Ιωαννίνων</p>
 
 
